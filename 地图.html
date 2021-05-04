@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+    
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Hello, World</title> 
+<style type="text/css"> 
+html{height:100%} 
+body{height:100%;margin:0px;padding:0px} 
+#container{height:100%} 
+</style> 
+<!-- 要进行联网使用 -->
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=4yVMPVlt649FOgfx0qHft4nOBpzr2AHR">
+</script>
+</head> 
+  
+<body> 
+<div id="container"></div>
+<script type="text/javascript">
+var map = new BMapGL.Map("container");
+// 创建地图实例 
+var point = new BMapGL.Point(106.330496,29.59817);
+// 创建点坐标 
+map.centerAndZoom(point, 17);
+// 初始化地图，设置中心点坐标和地图级别 
+map.enableScrollWheelZoom();
+// 这句为缩放功能
+var marker = new BMapGL.Marker(point);        // 创建标注   
+map.addOverlay(marker);                     // 将标注添加到地图中
+marker.enableDragging();
+// 标点
+var polygon = new BMapGL.Polygon([
+        new BMapGL.Point(106.325257,29.598908),
+        new BMapGL.Point(106.333685,29.604411),
+        new BMapGL.Point(106.334566,29.604615),
+        new BMapGL.Point(106.335913,29.604702),
+        new BMapGL.Point(106.336659,29.604364),
+        new BMapGL.Point(106.336933,29.60332),
+        new BMapGL.Point(106.335325,29.597051),
+        new BMapGL.Point(106.335199,29.593902),
+        new BMapGL.Point(106.324886,29.593918),
+        new BMapGL.Point(106.325257,29.598908)
+    ], {strokeColor:"blue", strokeWeight:3, strokeOpacity:1});
+map.addOverlay(polygon);
+// 将咱们学校圈起来
+
+</script> 
+</body> 
+</html>
