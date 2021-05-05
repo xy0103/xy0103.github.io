@@ -5,8 +5,8 @@ website
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>定位及路径规划</title>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Gb8UG14xNoglxHENIgUEowGQb2nvOViE"></script>  
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script><!--调用jQuery-->
+    <script type="text/javascript" src="git://api.map.baidu.com/api?v=2.0&ak=Gb8UG14xNoglxHENIgUEowGQb2nvOViE"></script>  
+    <script src="git://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script><!--调用jQuery-->
  
   <style type="text/css">
         body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
@@ -42,7 +42,7 @@ website
             var lngCurrent = r.point.lng;
             //alert('我的位置：'+ latCurrent + ',' + lngCurrent);
  
-            location.href="http://api.map.baidu.com/direction?origin="+latCurrent+","+lngCurrent+"&destination=29.605468,106.338329&mode=driving&region=重庆&output=html";
+            location.href="git://api.map.baidu.com/direction?origin="+latCurrent+","+lngCurrent+"&destination=29.605468,106.338329&mode=driving&region=重庆&output=html";
  
         }
         else {
